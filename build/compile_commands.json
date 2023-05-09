@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/dxmdeveloper/Desktop/LigaPolskichRodzin/build",
+  "command": "/usr/bin/clang++ -g -o CMakeFiles/teams.dir/Team.cpp.o -c /home/dxmdeveloper/Desktop/LigaPolskichRodzin/Team.cpp",
+  "file": "/home/dxmdeveloper/Desktop/LigaPolskichRodzin/Team.cpp"
+},
+{
+  "directory": "/home/dxmdeveloper/Desktop/LigaPolskichRodzin/build",
+  "command": "/usr/bin/clang++ -g -o CMakeFiles/teams.dir/main.cpp.o -c /home/dxmdeveloper/Desktop/LigaPolskichRodzin/main.cpp",
+  "file": "/home/dxmdeveloper/Desktop/LigaPolskichRodzin/main.cpp"
+},
+{
+  "directory": "/home/dxmdeveloper/Desktop/LigaPolskichRodzin/build",
+  "command": "/usr/bin/clang++ -g -o CMakeFiles/teams.dir/terminal.cpp.o -c /home/dxmdeveloper/Desktop/LigaPolskichRodzin/terminal.cpp",
+  "file": "/home/dxmdeveloper/Desktop/LigaPolskichRodzin/terminal.cpp"
+}
+]

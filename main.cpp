@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include "Team.hpp"
+#include <iomanip>
 
 int main(int argc, char * argv[]){
     std::vector<Team> teams {
@@ -19,13 +20,21 @@ int main(int argc, char * argv[]){
         {"Łowcy pedofili, miłośnicy pieczarek",     4,   2,    0,     6,    9},
         {"Mocarze z kiełbasą",                      5,   2,    9,    31,    8}
     };
-    std::sort(teams.begin(), teams.end(), [](Team& a, Team& b){return a < b;});
+    std::sort(teams.begin(), teams.end(), [](Team& a, Team& b){return a >= b;});
 
     {
-        uint i = teams.size();
+        std::cout << "lp. " << std::left << std::setw(40)
+         << "Nazwa drużyny" << "\t"
+         << "Wygrane" << "\t"
+         << "Remisy" << "\t" 
+         << "Przegrany" << "\t" 
+         << "Gole" << "\t" 
+         << "Stracone Gole" << "\n";
+        
+        uint i = 1;
         for(auto &team : teams){
             std::cout << i << ". " << team;
-            i--;
+            i++;
         }
     }
     return 0;

@@ -1,3 +1,4 @@
+#include <iomanip>
 #include "Team.hpp"
 #include "terminal.hpp"
 
@@ -19,7 +20,19 @@ bool Team::operator>=(const Team &team) const{
     return !(*this < team);
 } 
 std::ostream& operator<<(std::ostream& stream, const Team& team){
-    stream  << "Nazwa: "            << team.name << terminal::setTextColorEsc({25, 255, 30})
+    stream  << std::left << std::setw(40) 
+            << team.name << terminal::setTextColorEsc({25, 255, 30})  << "\t"
+            << team.wins << terminal::resetStylesEsc()                      << "\t"
+            << team.draws << terminal::setTextColorEsc({255, 30, 30}) << "\t"
+            << team.loses << terminal::setTextColorEsc({25, 255, 30}) << "\t\t"
+            << team.goals << terminal::setTextColorEsc({255, 30, 30}) << "\t"
+            << team.lostGoals << terminal::resetStylesEsc()
+            << std::endl;
+    return stream;
+}
+
+/*
+stream  << "Nazwa: "            << team.name << terminal::setTextColorEsc({25, 255, 30})
             << "\t\t\t\t Wygrane: "   << team.wins << terminal::resetStylesEsc()
             << "\t Remisy:"         << team.draws << terminal::setTextColorEsc({255, 30, 30})
             << "\t Przegrane: "     << team.loses << terminal::setTextColorEsc({25, 255, 30})
@@ -27,4 +40,4 @@ std::ostream& operator<<(std::ostream& stream, const Team& team){
             << "\t Stracone gole: " << team.lostGoals << terminal::resetStylesEsc() 
             << std::endl;
     return stream;
-}
+    */
